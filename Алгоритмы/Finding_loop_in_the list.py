@@ -21,3 +21,13 @@ class List:
             self._tail = newNode
         self._size += 1
 
+    def findNode(self, searchIndex):
+        currentIndex = 0
+        node = self._head
+        prevNode = None
+        while currentIndex != searchIndex:
+            prevNode = node
+            node = node.next
+            currentIndex += 1
+        return node
+
