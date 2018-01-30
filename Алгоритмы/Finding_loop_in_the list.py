@@ -44,3 +44,22 @@ class List:
         self._nextHead = self._nextHead.next
         return data
 
+    def hasLoop(self):
+        slow = self._head.next
+        fast=  self._head.next.next
+        isLoop = True
+        while slow != fast:
+            slow = slow.next
+            fast = fast.next.next
+            if (slow == None) or (fast == None):
+                isLoop = False
+                break
+        index = None
+        if isLoop:
+            index = 0
+            slow = self._head
+            while slow != fast:
+                slow = slow.next
+                fast = fast.next
+                index += 1
+        return isLoop
