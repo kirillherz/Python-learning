@@ -10,10 +10,12 @@ class List:
         self._head = None
         self._tail = None
         self._size = 0
+        self._nextHead = None
     
     def add(self, data):
         newNode = Node(data, None)
         if self._size == 0:
+            self._nextHead = newNode
             self._head = newNode
             self._tail = newNode
         else:
@@ -32,4 +34,8 @@ class List:
         return node
 
     def addLoop(self, index, data):
-        self._tail =  Node(data, self.findNode(index))
+        self._tail =  Node(data, self.findNode(index))    def next(self):
+        data = self._nextHead.data
+        self._nextHead = self._nextHead.next
+        return data
+
