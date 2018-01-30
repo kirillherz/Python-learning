@@ -31,3 +31,5 @@ class List:
             currentIndex += 1
         return node
 
+    def addLoop(self, index, data):
+        self._tail =  Node(data, self.findNode(index))
