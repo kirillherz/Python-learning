@@ -34,7 +34,6 @@ class List:
         return node
 
     def addLoop(self, index, data):
-        self._tail =  Node(data, self.findNode(index))    def next(self):
         newNode =  Node(data, self.findNode(index))
         self._tail.next = newNode
         self._tail = newNode
