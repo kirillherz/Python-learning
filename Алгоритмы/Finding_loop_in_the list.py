@@ -44,7 +44,7 @@ class List:
         self._nextHead = self._nextHead.next
         return data
 
-    def hasLoop(self):
+    def FindLoop(self):
         slow = self._head.next
         fast=  self._head.next.next
         isLoop = True
@@ -62,4 +62,4 @@ class List:
                 slow = slow.next
                 fast = fast.next
                 index += 1
-        return isLoop
+        return index
