@@ -31,6 +31,9 @@
   <ItemGroup>
     <Compile Include="LearningDjango\person\admin.py" />
     <Compile Include="LearningDjango\person\apps.py" />
+    <Compile Include="LearningDjango\person\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="LearningDjango\person\migrations\__init__.py" />
     <Compile Include="LearningDjango\person\models.py" />
     <Compile Include="LearningDjango\person\tests.py" />
