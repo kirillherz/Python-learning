@@ -1,16 +1,15 @@
 """
 Definition of urls for LearningDjango.
 """
-
+from .person.views import *
 from django.conf.urls import include, url
-
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
 
 urlpatterns = [
     # Examples:
-    # url(r'^$', LearningDjango.views.home, name='home'),
+    url(r'^$', index ),
     # url(r'^LearningDjango/', include('LearningDjango.LearningDjango.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
