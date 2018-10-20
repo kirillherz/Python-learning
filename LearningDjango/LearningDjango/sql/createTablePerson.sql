@@ -20,3 +20,10 @@ CREATE TABLE IF NOT EXISTS book(
     name varchar(50) not null
 );
 
+CREATE TABLE IF NOT EXISTS author_book(
+    id INTEGER PRIMARY KEY,
+    id_author INTEGER not null,
+    id_book INTEGER not null,
+    foreign key(id_author) references author(id),
+    foreign key(id_book) references book(id)
+);
