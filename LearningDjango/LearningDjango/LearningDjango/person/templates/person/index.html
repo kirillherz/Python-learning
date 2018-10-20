@@ -1,9 +1,11 @@
-<html>
+﻿<html>
 <head><title></title></head>
 
 <body>
-
-{{ form.as_table }}
-
+<form method="post" action="">
+    {{ form.as_table }}
+    {% csrf_token %}
+    <input type="submit" value="отправить" />
+</form>
 </body>
 </html>
