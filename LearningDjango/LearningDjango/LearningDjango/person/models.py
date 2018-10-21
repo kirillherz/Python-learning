@@ -28,3 +28,12 @@ class Author(models.Model):
         managed = False
         db_table = "author"
 
+class Book(models.Model):
+    id = models.IntegerField(primary_key = True)
+    name = models.CharField(max_length = 50)
+    authors = models.ManyToManyField(Author, through = "AuthorBook")
+
+    class Meta:
+        managed = False
+        db_table = "book"
+
