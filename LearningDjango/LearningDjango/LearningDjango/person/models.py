@@ -37,3 +37,12 @@ class Book(models.Model):
         managed = False
         db_table = "book"
 
+class AuthorBook(models.Model):
+    id = models.IntegerField(primary_key = True)
+    author = models.ForeignKey(Author, db_column = "id_author")
+    book = models.ForeignKey(Book, db_column = "id_book")
+
+    class Meta:
+        managed = False
+        db_table = "author_book"
+        auto_created = True
