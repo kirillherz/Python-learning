@@ -1,5 +1,7 @@
-a = [3,2, 8, 1, 3, 5,2,7,4,8,9,4,1,5,3,6,8,6,1,2,4,5,2,1,9]
-
+a = []
+import random
+for i in range(1,100):
+    a.append(random.randint(1,100))
 
 def partition(arr, l, r):
     pivot = arr[r]
@@ -13,6 +15,8 @@ def partition(arr, l, r):
             arr[l] = arr[r]
             arr[r] = temp
             r -= 1
+            l += 1
+        if l == r and  arr[l] < pivot:
             l += 1
     return l
 
